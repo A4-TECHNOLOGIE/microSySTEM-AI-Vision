@@ -137,7 +137,7 @@ namespace a4_ai_vision {
      * @param b1 blue value for RGB1, from 0 to 255
      */
     //% blockId=a4_ai_vision_set_dual_rgb
-    //% block="set RGB0 R %r0 G %g0 B %b0 and RGB1 R %r1 G %g1 B %b1"
+    //% block="set RGB0 R %r0 G %g0 B %b0 RGB1 R %r1 G %g1 B %b1"
     //% r0.min=0 r0.max=255 r0.defl=255
     //% g0.min=0 g0.max=255 g0.defl=255
     //% b0.min=0 b0.max=255 b0.defl=255
@@ -146,7 +146,7 @@ namespace a4_ai_vision {
     //% b1.min=0 b1.max=255 b1.defl=255
     //% weight=80
     //% group="RGB LEDs"
-    //% inlineInputMode=external
+    //% inlineInputMode=inline
     export function setDualRgb(r0: number, g0: number, b0: number, r1: number, g1: number, b1: number): void {
         writeRgbValues(r0, g0, b0, r1, g1, b1)
     }
