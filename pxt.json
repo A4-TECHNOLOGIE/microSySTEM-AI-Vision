@@ -1,18 +1,23 @@
 {
-  "name": "a4 ms-vision",
-  "version": "0.1.0",
-  "description": "Extension pour la maquette a4 ms-vision",
-  "license": "CC",
+  "name": "microSySTEM-AI-Vision",
+  "version": "0.2.0",
+  "description": "MakeCode extension for the A4 microSySTEM AI Vision mock-up.",
+  "license": "MIT",
   "dependencies": {
-      "core": "*",
-      "huskylens2": "github:DFRobot/pxt-DFRobot_HuskyLensV2"
-      },
+    "core": "*",
+    "huskylens2": "github:DFRobot/pxt-DFRobot_HuskyLensV2",
+    "lcdDisplay": "github:DFRobot/pxt-DFRobot_lcdDisplay"
+  },
   "files": [
-    "lcdDisplay.ts",
-    "README.md"
+    "README.md",
+    "ai-vision.ts",
+    "_locales/fr/ai-vision-strings.json",
+    "_locales/fr/ai-vision-jsdoc-strings.json"
   ],
+  "testFiles": [],
+  "public": true,
   "targetVersions": {
-    "target": "8.0.8",
+    "target": "8.0.18",
     "targetId": "microbit"
   },
   "supportedTargets": [
