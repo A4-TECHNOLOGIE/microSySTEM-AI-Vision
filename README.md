@@ -1,35 +1,42 @@
-# A4_ms-vision
-Extension MakeCode pour la maquette ms-vision
+# microSySTEM-AI-Vision
 
+MakeCode extension for the A4 microSySTEM AI Vision mock-up.
 
+This package adds a small A4 menu named **a4 AI Vision** and automatically loads the external extensions used by the mock-up:
 
+- **HUSKYLENS 2**: `github:DFRobot/pxt-DFRobot_HuskyLensV2`
+- **DFRobot LCD display**: `github:DFRobot/pxt-DFRobot_lcdDisplay`
 
-# pxt-DFRobot_lcdDisplay_uart
+## Blocks provided by a4 AI Vision
 
-MakeCode extension for the DFRobot 2-inch color display with I2C and UART support.
+### System
 
-This fork adds UART support for the display so it can be used without sharing the I2C bus.
+- `battery level (%)`
 
-## UART wiring
+Returns the DFR1216 battery level in percent.
 
-Important: UART wiring must be crossed.
+### RGB LEDs
 
-- Display **R** -> controller **TX**
-- Display **T** -> controller **RX**
+- `set RGB0 to ... and RGB1 to ...`
+- `set RGB0 R ... G ... B ... and RGB1 R ... G ... B ...`
+- `set RGB brightness ...`
+- `turn off RGB LEDs`
 
-## Display mode
+The two DFR1216 RGB LEDs are written at the same time so changing one LED does not erase the previous state of the other LED.
 
-Set the display DIP switch to **UART/Serial** mode before using UART functions.
+### LCD
 
-## Validated UART baud rate
+- `initialize LCD UART TX ... RX ...`
 
-Use **9600** baud.
+Initializes the display serial link at **9600 baud**.
 
-115200 was tested and did not work on the target hardware.
+UART wiring must be crossed:
 
-## Example
+- display **R** to controller **TX**
+- display **T** to controller **RX**
 
-```typescript
-lcdDisplay.lcdInitUART9600(SerialPin.P8, SerialPin.P12)
-lcdDisplay.lcdSetBgcolor(0x001F)
-lcdDisplay.lcdDisplayText("UART OK", 1, 120, 120, lcdDisplay.FontSize.Large, 0xFFFFFF)
+Set the display DIP switch to **UART / Serial** mode before using UART.
+
+## Notes
+
+The A4 extension only contains the A4-specific helper blocks. Camera and display blocks remain available in their own MakeCode menus through the dependencies declared in `pxt.json`.
