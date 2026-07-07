@@ -1,0 +1,19 @@
+{
+  "a4_ai_vision.batteryLevel": "Renvoie le niveau de batterie de la carte DFR1216 en pourcentage.",
+  "a4_ai_vision.setDualRgbColors": "Règle simultanément les deux LED RGB intégrées de la carte DFR1216 avec des couleurs prédéfinies.",
+  "a4_ai_vision.setDualRgbColors|param|color0": "Couleur appliquée à RGB0.",
+  "a4_ai_vision.setDualRgbColors|param|color1": "Couleur appliquée à RGB1.",
+  "a4_ai_vision.setDualRgb": "Règle simultanément les deux LED RGB intégrées de la carte DFR1216 avec des valeurs RVB de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|r0": "Valeur rouge de RGB0, de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|g0": "Valeur verte de RGB0, de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|b0": "Valeur bleue de RGB0, de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|r1": "Valeur rouge de RGB1, de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|g1": "Valeur verte de RGB1, de 0 à 255.",
+  "a4_ai_vision.setDualRgb|param|b1": "Valeur bleue de RGB1, de 0 à 255.",
+  "a4_ai_vision.setRgbBrightness": "Règle la luminosité utilisée par les deux LED RGB intégrées de la carte DFR1216.",
+  "a4_ai_vision.setRgbBrightness|param|brightness": "Luminosité, de 0 à 255.",
+  "a4_ai_vision.clearRgb": "Éteint les deux LED RGB intégrées de la carte DFR1216.",
+  "a4_ai_vision.initLcdUart": "Initialise l'écran LCD DFRobot en UART à 9600 bauds.",
+  "a4_ai_vision.initLcdUart|param|tx": "Broche TX du contrôleur, reliée à la broche R de l'écran.",
+  "a4_ai_vision.initLcdUart|param|rx": "Broche RX du contrôleur, reliée à la broche T de l'écran."
+}
