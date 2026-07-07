@@ -1,0 +1,18 @@
+{
+  "A4VisionRgbColor.Red|block": "rouge",
+  "A4VisionRgbColor.Green|block": "vert",
+  "A4VisionRgbColor.Blue|block": "bleu",
+  "A4VisionRgbColor.Yellow|block": "jaune",
+  "A4VisionRgbColor.Cyan|block": "cyan",
+  "A4VisionRgbColor.Magenta|block": "magenta",
+  "A4VisionRgbColor.White|block": "blanc",
+  "A4VisionRgbColor.Off|block": "éteint",
+  "a4_ai_vision|block": "a4 AI Vision",
+  "a4_ai_vision|groups": "['Système', 'LED RGB', 'LCD']",
+  "a4_ai_vision.batteryLevel|block": "niveau de batterie (\\%)",
+  "a4_ai_vision.setDualRgbColors|block": "régler RGB0 sur %color0 et RGB1 sur %color1",
+  "a4_ai_vision.setDualRgb|block": "régler RGB0 R %r0 V %g0 B %b0 et RGB1 R %r1 V %g1 B %b1",
+  "a4_ai_vision.setRgbBrightness|block": "régler la luminosité RGB %brightness",
+  "a4_ai_vision.clearRgb|block": "éteindre les LED RGB",
+  "a4_ai_vision.initLcdUart|block": "initialiser LCD UART TX %tx RX %rx"
+}
