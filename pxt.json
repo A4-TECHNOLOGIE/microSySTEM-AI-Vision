@@ -1,12 +1,12 @@
 {
   "name": "microSySTEM-AI-Vision",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "MakeCode extension for the A4 microSySTEM AI Vision mock-up.",
   "license": "MIT",
   "dependencies": {
     "core": "*",
     "huskylens2": "github:DFRobot/pxt-DFRobot_HuskyLensV2",
-    "lcdDisplay": "github:DFRobot/pxt-DFRobot_lcdDisplay"
+    "lcdDisplay": "github:A4-TECHNOLOGIE/pxt-DFRobot_lcdDisplay_uart"
   },
   "files": [
     "README.md",
