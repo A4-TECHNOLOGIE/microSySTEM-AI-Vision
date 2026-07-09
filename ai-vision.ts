@@ -179,17 +179,16 @@ namespace a4_ai_vision {
     /**
      * Initializes the DFRobot LCD display over UART at 9600 baud.
      * Use crossed wiring: display R to the controller TX pin, and display T to the controller RX pin.
-     * @param tx controller TX pin connected to the display R pin, eg: SerialPin.P8
-     * @param rx controller RX pin connected to the display T pin, eg: SerialPin.P12
+     * @param tx controller TX pin connected to the display R pin, eg: SerialPin.P1
+     * @param rx controller RX pin connected to the display T pin, eg: SerialPin.P0
      */
     //% blockId=a4_ai_vision_lcd_uart_init
     //% block="initialize LCD UART TX %tx RX %rx"
-    //% tx.defl=SerialPin.P8
-    //% rx.defl=SerialPin.P12
+    //% tx.defl=SerialPin.P1
+    //% rx.defl=SerialPin.P0
     //% weight=50
     //% group="LCD"
     export function initLcdUart(tx: SerialPin, rx: SerialPin): void {
-        serial.redirect(tx, rx, BaudRate.BaudRate9600)
-        basic.pause(1000)
+        lcdDisplay.lcdInitUART9600(tx, rx)
     }
 }
