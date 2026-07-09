@@ -1,6 +1,6 @@
 {
   "name": "microSySTEM-AI-Vision",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "MakeCode extension for the A4 microSySTEM AI Vision mock-up.",
   "license": "MIT",
   "dependencies": {
@@ -16,7 +16,9 @@
     "_locales/fr/microSySTEM-AI-Vision-strings.json",
     "_locales/fr/microSySTEM-AI-Vision-jsdoc-strings.json"
   ],
-  "testFiles": [],
+  "testFiles": [
+    "test.ts"
+  ],
   "public": true,
   "targetVersions": {
     "target": "8.0.18",
