@@ -6,7 +6,7 @@
   "dependencies": {
     "core": "*",
     "huskylens2": "github:DFRobot/pxt-DFRobot_HuskyLensV2",
-    "lcdDisplay": "github:A4-TECHNOLOGIE/pxt-DFRobot_lcdDisplay_uart"
+    "lcdDisplay": "github:A4-TECHNOLOGIE/pxt-DFRobot_lcdDisplay_uart#v0.0.10"
   },
   "files": [
     "README.md",
