@@ -17,7 +17,7 @@ enum A4VisionRgbColor {
     Off = 7
 }
 
-//% block="a4 AI Vision"
+//% block="a4 microSySTEM AI Vision"
 //% weight=100 color=#5b3fe8 icon="\uf06e"
 //% groups='["System", "RGB LEDs", "LCD"]'
 namespace a4MicroSystemAiVision {
