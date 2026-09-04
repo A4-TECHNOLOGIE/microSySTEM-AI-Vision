@@ -87,7 +87,7 @@ a4_ai_vision.initLcdUart(SerialPin.P1, SerialPin.P0)
 
 **Pass:** the project compiles and behaves as before. New blocks inserted from the toolbox generate calls to `a4MicroSystemAiVision`.
 
-**Fail:** an old symbol is missing or two copies of the a4 AI Vision block category appear.
+**Fail:** an old symbol is missing or two copies of the a4 microSySTEM AI Vision block category appear.
 
 ## Release acceptance record
 
