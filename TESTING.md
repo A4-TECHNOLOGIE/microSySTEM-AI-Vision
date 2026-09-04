@@ -46,7 +46,7 @@ Any compilation error, missing symbol, invalid package file or simulator excepti
 
 1. Connect micro:bit P1 (TX) to display R and P0 (RX) to display T.
 2. Set the LCD selector to UART/Serial mode.
-3. Initialize the display once at 9600 baud.
+3. Use the parameter-free `initialize the LCD screen` block once.
 4. Clear the display, select a white background and show black text.
 
 **Pass:** the display clears and the expected text appears once, with the correct background and text colors.

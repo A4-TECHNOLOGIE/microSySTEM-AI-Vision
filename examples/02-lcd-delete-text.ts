@@ -2,7 +2,7 @@
 // Text objects 3 and 4 must disappear after two seconds, while the rectangle
 // object 5 and the title remain visible.
 
-a4MicroSystemAiVision.initLcdUart(SerialPin.P1, SerialPin.P0)
+a4MicroSystemAiVision.initLcd()
 lcdDisplay.lcdClearAll()
 lcdDisplay.lcdSetBgcolor(0xffffff)
 

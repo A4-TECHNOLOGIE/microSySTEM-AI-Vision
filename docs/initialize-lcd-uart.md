@@ -1,22 +1,17 @@
-# initialize the LCD over UART
+# initialize the LCD screen
 
-Initializes the DFRobot color LCD serial link at 9600 baud. The UART lines must be crossed: controller TX to display R, and controller RX to display T.
+Initializes the DFRobot color LCD serial link at 9600 baud using the fixed microSySTEM-AI Vision wiring. The UART lines are crossed: controller P1 (TX) to display R, and controller P0 (RX) to display T.
 
 ```sig
-a4MicroSystemAiVision.initLcdUart(SerialPin.P1, SerialPin.P0)
+a4MicroSystemAiVision.initLcd()
 ```
 
-## Parameters
-
-- **tx**: controller transmit pin connected to display R.
-- **rx**: controller receive pin connected to display T.
-
-The default microSySTEM-AI Vision wiring uses P1 for TX and P0 for RX. Set the display selector to UART/Serial mode before running the program.
+No pin selection is required. Set the display selector to UART/Serial mode before running the program.
 
 ## Example
 
 ```blocks
-a4MicroSystemAiVision.initLcdUart(SerialPin.P1, SerialPin.P0)
+a4MicroSystemAiVision.initLcd()
 lcdDisplay.lcdClearAll()
 lcdDisplay.lcdSetBgcolor(0xffffff)
 lcdDisplay.lcdDisplayText(

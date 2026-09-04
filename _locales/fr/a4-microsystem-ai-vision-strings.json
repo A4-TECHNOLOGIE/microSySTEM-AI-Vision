@@ -17,5 +17,6 @@
   "a4MicroSystemAiVision.setDualRgb|block": "régler RGB0 R %r0 V %g0 B %b0 RGB1 R %r1 V %g1 B %b1",
   "a4MicroSystemAiVision.setRgbBrightness|block": "régler la luminosité RGB %brightness",
   "a4MicroSystemAiVision.clearRgb|block": "éteindre les LED RGB",
+  "a4MicroSystemAiVision.initLcd|block": "initialiser l'écran LCD",
   "a4MicroSystemAiVision.initLcdUart|block": "initialiser LCD UART TX %tx RX %rx"
 }

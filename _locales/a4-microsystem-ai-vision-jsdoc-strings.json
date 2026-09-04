@@ -13,7 +13,8 @@
   "a4MicroSystemAiVision.setRgbBrightness": "Sets the brightness used by the two onboard DFR1216 RGB LEDs.",
   "a4MicroSystemAiVision.setRgbBrightness|param|brightness": "brightness value, from 0 to 255",
   "a4MicroSystemAiVision.clearRgb": "Turns off the two onboard DFR1216 RGB LEDs.",
-  "a4MicroSystemAiVision.initLcdUart": "Initializes the DFRobot LCD display over UART at 9600 baud.",
+  "a4MicroSystemAiVision.initLcd": "Initializes the model's LCD screen using its fixed P1/P0 UART wiring.",
+  "a4MicroSystemAiVision.initLcdUart": "Initializes the DFRobot LCD display over UART at 9600 baud using custom pins.",
   "a4MicroSystemAiVision.initLcdUart|param|tx": "controller TX pin connected to the display R pin",
   "a4MicroSystemAiVision.initLcdUart|param|rx": "controller RX pin connected to the display T pin"
 }

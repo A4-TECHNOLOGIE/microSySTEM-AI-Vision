@@ -13,6 +13,7 @@ function compileAiVisionApi(): void {
     const battery = a4MicroSystemAiVision.batteryLevel()
     serial.writeValue("battery", battery)
 
+    a4MicroSystemAiVision.initLcd()
     a4MicroSystemAiVision.initLcdUart(SerialPin.P1, SerialPin.P0)
 }
 

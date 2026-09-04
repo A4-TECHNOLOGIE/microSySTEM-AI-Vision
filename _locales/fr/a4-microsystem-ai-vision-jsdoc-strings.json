@@ -13,7 +13,8 @@
   "a4MicroSystemAiVision.setRgbBrightness": "Règle la luminosité utilisée par les deux LED RGB intégrées de la carte DFR1216.",
   "a4MicroSystemAiVision.setRgbBrightness|param|brightness": "luminosité, de 0 à 255",
   "a4MicroSystemAiVision.clearRgb": "Éteint les deux LED RGB intégrées de la carte DFR1216.",
-  "a4MicroSystemAiVision.initLcdUart": "Initialise l'écran LCD DFRobot en UART à 9600 bauds.",
+  "a4MicroSystemAiVision.initLcd": "Initialise l'écran LCD de la maquette avec son câblage UART fixe sur P1 et P0.",
+  "a4MicroSystemAiVision.initLcdUart": "Initialise l'écran LCD DFRobot en UART à 9600 bauds avec des broches personnalisées.",
   "a4MicroSystemAiVision.initLcdUart|param|tx": "broche TX du contrôleur, reliée à la broche R de l'écran",
   "a4MicroSystemAiVision.initLcdUart|param|rx": "broche RX du contrôleur, reliée à la broche T de l'écran"
 }

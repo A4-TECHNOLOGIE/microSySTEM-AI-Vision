@@ -182,18 +182,29 @@ namespace a4MicroSystemAiVision {
     }
 
     /**
-     * Initializes the DFRobot LCD display over UART at 9600 baud.
-     * Use crossed wiring: display R to the controller TX pin, and display T to the controller RX pin.
+     * Initializes the model's DFRobot LCD display over UART at 9600 baud.
+     * The fixed microSySTEM-AI Vision wiring uses P1 for TX and P0 for RX.
+     */
+    //% blockId=a4_ai_vision_init_lcd
+    //% help=github:a4-microsystem-ai-vision/docs/initialize-lcd-uart
+    //% block="initialize the LCD screen"
+    //% weight=50
+    //% group="LCD"
+    export function initLcd(): void {
+        initLcdUart(SerialPin.P1, SerialPin.P0)
+    }
+
+    /**
+     * Initializes the DFRobot LCD display over UART at 9600 baud using custom pins.
+     * Kept for compatibility with projects created before the first public release.
      * @param tx controller TX pin connected to the display R pin, eg: SerialPin.P1
      * @param rx controller RX pin connected to the display T pin, eg: SerialPin.P0
      */
     //% blockId=a4_ai_vision_lcd_uart_init
-    //% help=github:a4-microsystem-ai-vision/docs/initialize-lcd-uart
     //% block="initialize LCD UART TX %tx RX %rx"
     //% tx.defl=SerialPin.P1
     //% rx.defl=SerialPin.P0
-    //% weight=50
-    //% group="LCD"
+    //% deprecated=true
     export function initLcdUart(tx: SerialPin, rx: SerialPin): void {
         lcdDisplay.lcdInitUART9600(tx, rx)
     }
