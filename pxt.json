@@ -1,6 +1,6 @@
 {
   "name": "a4-microsystem-ai-vision",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "MakeCode extension for the A4 Technologie microSySTEM-AI Vision educational model: HuskyLens 2 camera, DFR1216 RGB LEDs and UART color LCD for BBC micro:bit.",
   "license": "MIT",
   "dependencies": {
