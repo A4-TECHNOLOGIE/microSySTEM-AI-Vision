@@ -38,7 +38,7 @@ The extension automatically installs:
 - `huskylens2` — the DFRobot HuskyLens 2 MakeCode extension;
 - `lcdDisplay` — the A4 UART-compatible fork of the DFRobot color LCD extension.
 
-The **a4 AI Vision** menu contains the A4-specific helpers for the DFR1216 controller and LCD initialization. Camera and display blocks remain available in their own MakeCode menus.
+The **a4 microSySTEM AI Vision** menu contains the A4-specific helpers for the DFR1216 controller and LCD initialization. Camera and display blocks remain available in their own MakeCode menus.
 
 | Component | Connection or interface |
 |---|---|
@@ -197,7 +197,7 @@ Ready-to-use programs are available in the [`examples`](examples) folder for the
 
 Cette extension MakeCode permet de programmer la maquette pédagogique **microSySTEM-AI Vision** d'A4 Technologie.
 
-Elle installe automatiquement les extensions de la caméra HuskyLens 2 et de l'écran LCD couleur. Le menu **a4 AI Vision** ajoute les fonctions propres à la carte DFR1216 : lecture du niveau de batterie, commande simultanée des deux LED RGB et initialisation de l'écran en UART.
+Elle installe automatiquement les extensions de la caméra HuskyLens 2 et de l'écran LCD couleur. Le menu **a4 microSySTEM AI Vision** ajoute les fonctions propres à la carte DFR1216 : lecture du niveau de batterie, commande simultanée des deux LED RGB et initialisation de l'écran en UART.
 
 Les blocs peuvent être utilisés pour réaliser des activités de classification d'images, de tri automatisé, de contrôle visuel ou de reconnaissance de produits. La maquette peut transmettre par radio l'identifiant reconnu à une autre maquette microSySTEM, par exemple Weight, Parking ou Barrier.
 
