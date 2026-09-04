@@ -1,27 +1,34 @@
 {
-  "name": "microSySTEM-AI-Vision",
-  "version": "0.2.4",
-  "description": "MakeCode extension for the A4 microSySTEM AI Vision mock-up.",
+  "name": "a4-microsystem-ai-vision",
+  "version": "0.2.8",
+  "description": "MakeCode extension for the A4 Technologie microSySTEM-AI Vision educational model: HuskyLens 2 camera, DFR1216 RGB LEDs and UART color LCD for BBC micro:bit.",
   "license": "MIT",
   "dependencies": {
     "core": "*",
     "huskylens2": "github:DFRobot/pxt-DFRobot_HuskyLensV2",
-    "lcdDisplay": "github:A4-TECHNOLOGIE/pxt-DFRobot_lcdDisplay_uart"
+    "lcdDisplay": "github:A4-TECHNOLOGIE/pxt-DFRobot_lcdDisplay_uart#v0.0.10"
   },
   "files": [
     "README.md",
     "ai-vision.ts",
-    "_locales/fr/ai-vision-strings.json",
-    "_locales/fr/ai-vision-jsdoc-strings.json",
-    "_locales/fr/microSySTEM-AI-Vision-strings.json",
-    "_locales/fr/microSySTEM-AI-Vision-jsdoc-strings.json"
+    "_locales/a4-microsystem-ai-vision-strings.json",
+    "_locales/a4-microsystem-ai-vision-jsdoc-strings.json",
+    "_locales/fr/a4-microsystem-ai-vision-strings.json",
+    "_locales/fr/a4-microsystem-ai-vision-jsdoc-strings.json",
+    "TESTING.md",
+    "docs/battery-level.md",
+    "docs/set-dual-rgb-colors.md",
+    "docs/set-dual-rgb.md",
+    "docs/set-rgb-brightness.md",
+    "docs/clear-rgb.md",
+    "docs/initialize-lcd-uart.md"
   ],
   "testFiles": [
     "test.ts"
   ],
   "public": true,
   "targetVersions": {
-    "target": "8.0.18",
+    "target": "8.0.22",
     "targetId": "microbit"
   },
   "supportedTargets": [

@@ -1,0 +1,20 @@
+{
+  "a4MicroSystemAiVision.batteryLevel": "Returns the DFR1216 battery level in percent.",
+  "a4MicroSystemAiVision.setDualRgbColors": "Sets the two onboard DFR1216 RGB LEDs at the same time, using predefined colors.",
+  "a4MicroSystemAiVision.setDualRgbColors|param|color0": "color applied to RGB0",
+  "a4MicroSystemAiVision.setDualRgbColors|param|color1": "color applied to RGB1",
+  "a4MicroSystemAiVision.setDualRgb": "Sets the two onboard DFR1216 RGB LEDs at the same time, using RGB values from 0 to 255.",
+  "a4MicroSystemAiVision.setDualRgb|param|r0": "red value for RGB0, from 0 to 255",
+  "a4MicroSystemAiVision.setDualRgb|param|g0": "green value for RGB0, from 0 to 255",
+  "a4MicroSystemAiVision.setDualRgb|param|b0": "blue value for RGB0, from 0 to 255",
+  "a4MicroSystemAiVision.setDualRgb|param|r1": "red value for RGB1, from 0 to 255",
+  "a4MicroSystemAiVision.setDualRgb|param|g1": "green value for RGB1, from 0 to 255",
+  "a4MicroSystemAiVision.setDualRgb|param|b1": "blue value for RGB1, from 0 to 255",
+  "a4MicroSystemAiVision.setRgbBrightness": "Sets the brightness used by the two onboard DFR1216 RGB LEDs.",
+  "a4MicroSystemAiVision.setRgbBrightness|param|brightness": "brightness value, from 0 to 255",
+  "a4MicroSystemAiVision.clearRgb": "Turns off the two onboard DFR1216 RGB LEDs.",
+  "a4MicroSystemAiVision.initLcd": "Initializes the model's LCD screen using its fixed P1/P0 UART wiring.",
+  "a4MicroSystemAiVision.initLcdUart": "Initializes the DFRobot LCD display over UART at 9600 baud using custom pins.",
+  "a4MicroSystemAiVision.initLcdUart|param|tx": "controller TX pin connected to the display R pin",
+  "a4MicroSystemAiVision.initLcdUart|param|rx": "controller RX pin connected to the display T pin"
+}

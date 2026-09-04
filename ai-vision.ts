@@ -17,10 +17,10 @@ enum A4VisionRgbColor {
     Off = 7
 }
 
-//% block="a4 AI Vision"
+//% block="a4 microSySTEM AI Vision"
 //% weight=100 color=#5b3fe8 icon="\uf06e"
 //% groups='["System", "RGB LEDs", "LCD"]'
-namespace a4_ai_vision {
+namespace a4MicroSystemAiVision {
     const DFR1216_I2C_ADDRESS = 0x33
     const BATTERY_LEVEL_REGISTER = 0x87
     const RGB_LED_REGISTER = 0x90
@@ -103,6 +103,7 @@ namespace a4_ai_vision {
      * Returns the DFR1216 battery level in percent.
      */
     //% blockId=a4_ai_vision_battery_level
+    //% help=github:a4-microsystem-ai-vision/docs/battery-level
     //% block="battery level (\\%)"
     //% weight=100
     //% group="System"
@@ -117,6 +118,7 @@ namespace a4_ai_vision {
      * @param color1 color applied to RGB1
      */
     //% blockId=a4_ai_vision_set_dual_rgb_colors
+    //% help=github:a4-microsystem-ai-vision/docs/set-dual-rgb-colors
     //% block="set RGB0 to %color0 and RGB1 to %color1"
     //% weight=90
     //% group="RGB LEDs"
@@ -137,6 +139,7 @@ namespace a4_ai_vision {
      * @param b1 blue value for RGB1, from 0 to 255
      */
     //% blockId=a4_ai_vision_set_dual_rgb
+    //% help=github:a4-microsystem-ai-vision/docs/set-dual-rgb
     //% block="set RGB0 R %r0 G %g0 B %b0 RGB1 R %r1 G %g1 B %b1"
     //% r0.min=0 r0.max=255 r0.defl=255
     //% g0.min=0 g0.max=255 g0.defl=255
@@ -156,6 +159,7 @@ namespace a4_ai_vision {
      * @param brightness brightness value, from 0 to 255
      */
     //% blockId=a4_ai_vision_set_rgb_brightness
+    //% help=github:a4-microsystem-ai-vision/docs/set-rgb-brightness
     //% block="set RGB brightness %brightness"
     //% brightness.min=0 brightness.max=255 brightness.defl=255
     //% weight=70
@@ -169,6 +173,7 @@ namespace a4_ai_vision {
      * Turns off the two onboard DFR1216 RGB LEDs.
      */
     //% blockId=a4_ai_vision_clear_rgb
+    //% help=github:a4-microsystem-ai-vision/docs/clear-rgb
     //% block="turn off RGB LEDs"
     //% weight=60
     //% group="RGB LEDs"
@@ -177,8 +182,21 @@ namespace a4_ai_vision {
     }
 
     /**
-     * Initializes the DFRobot LCD display over UART at 9600 baud.
-     * Use crossed wiring: display R to the controller TX pin, and display T to the controller RX pin.
+     * Initializes the model's DFRobot LCD display over UART at 9600 baud.
+     * The fixed microSySTEM-AI Vision wiring uses P1 for TX and P0 for RX.
+     */
+    //% blockId=a4_ai_vision_init_lcd
+    //% help=github:a4-microsystem-ai-vision/docs/initialize-lcd-uart
+    //% block="initialize the LCD screen"
+    //% weight=50
+    //% group="LCD"
+    export function initLcd(): void {
+        initLcdUart(SerialPin.P1, SerialPin.P0)
+    }
+
+    /**
+     * Initializes the DFRobot LCD display over UART at 9600 baud using custom pins.
+     * Kept for compatibility with projects created before the first public release.
      * @param tx controller TX pin connected to the display R pin, eg: SerialPin.P1
      * @param rx controller RX pin connected to the display T pin, eg: SerialPin.P0
      */
@@ -186,9 +204,37 @@ namespace a4_ai_vision {
     //% block="initialize LCD UART TX %tx RX %rx"
     //% tx.defl=SerialPin.P1
     //% rx.defl=SerialPin.P0
-    //% weight=50
-    //% group="LCD"
+    //% deprecated=true
     export function initLcdUart(tx: SerialPin, rx: SerialPin): void {
         lcdDisplay.lcdInitUART9600(tx, rx)
+    }
+}
+
+// Compatibility aliases for projects created before the first public release.
+// They intentionally have no block annotations and remain hidden from the
+// toolbox. New projects generate the MakeCode-compliant camelCase namespace.
+namespace a4_ai_vision {
+    export function batteryLevel(): number {
+        return a4MicroSystemAiVision.batteryLevel()
+    }
+
+    export function setDualRgbColors(color0: A4VisionRgbColor, color1: A4VisionRgbColor): void {
+        a4MicroSystemAiVision.setDualRgbColors(color0, color1)
+    }
+
+    export function setDualRgb(r0: number, g0: number, b0: number, r1: number, g1: number, b1: number): void {
+        a4MicroSystemAiVision.setDualRgb(r0, g0, b0, r1, g1, b1)
+    }
+
+    export function setRgbBrightness(brightness: number): void {
+        a4MicroSystemAiVision.setRgbBrightness(brightness)
+    }
+
+    export function clearRgb(): void {
+        a4MicroSystemAiVision.clearRgb()
+    }
+
+    export function initLcdUart(tx: SerialPin, rx: SerialPin): void {
+        a4MicroSystemAiVision.initLcdUart(tx, rx)
     }
 }

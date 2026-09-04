@@ -1,0 +1,22 @@
+{
+  "A4VisionRgbColor.Red|block": "red",
+  "A4VisionRgbColor.Green|block": "green",
+  "A4VisionRgbColor.Blue|block": "blue",
+  "A4VisionRgbColor.Yellow|block": "yellow",
+  "A4VisionRgbColor.Cyan|block": "cyan",
+  "A4VisionRgbColor.Magenta|block": "magenta",
+  "A4VisionRgbColor.White|block": "white",
+  "A4VisionRgbColor.Off|block": "off",
+  "a4MicroSystemAiVision|block": "a4 microSySTEM AI Vision",
+  "{id:category}a4MicroSystemAiVision": "a4 microSySTEM AI Vision",
+  "{id:group}System": "System",
+  "{id:group}RGB LEDs": "RGB LEDs",
+  "{id:group}LCD": "LCD",
+  "a4MicroSystemAiVision.batteryLevel|block": "battery level (\\%)",
+  "a4MicroSystemAiVision.setDualRgbColors|block": "set RGB0 to %color0 and RGB1 to %color1",
+  "a4MicroSystemAiVision.setDualRgb|block": "set RGB0 R %r0 G %g0 B %b0 RGB1 R %r1 G %g1 B %b1",
+  "a4MicroSystemAiVision.setRgbBrightness|block": "set RGB brightness %brightness",
+  "a4MicroSystemAiVision.clearRgb|block": "turn off RGB LEDs",
+  "a4MicroSystemAiVision.initLcd|block": "initialize the LCD screen",
+  "a4MicroSystemAiVision.initLcdUart|block": "initialize LCD UART TX %tx RX %rx"
+}
