@@ -4,10 +4,9 @@
 
 MakeCode extension for the **A4 Technologie microSySTEM-AI Vision** educational artificial-intelligence model for **BBC micro:bit**.
 
-The extension is designed for both BBC micro:bit V1 and V2. It uses I2C, UART,
-radio and standard pin APIs shared by both revisions. The documented hardware
-acceptance campaign was performed on a micro:bit V2; physical V1 confirmation
-is tracked separately in [`TESTING.md`](TESTING.md).
+The extension supports both BBC micro:bit V1 and V2. It uses I2C, UART, radio
+and standard pin APIs shared by both revisions. Physical compatibility tests
+for both board revisions are recorded in [`TESTING.md`](TESTING.md).
 
 The model combines a HuskyLens 2 camera, a programmable color LCD and the RGB LEDs of a DFR1216 controller. It enables students to create embedded visual-recognition applications and exchange the recognized information with other microSySTEM models by radio.
 

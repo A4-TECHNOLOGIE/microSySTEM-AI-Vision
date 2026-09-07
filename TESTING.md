@@ -32,9 +32,9 @@ Any compilation error, missing symbol, invalid package file or simulator excepti
 - four visually distinct test objects for classification.
 
 The extension uses only I2C, UART, radio and standard pin APIs shared by
-micro:bit V1 and V2. The acceptance tests below were performed on a micro:bit
-V2. A physical V1 test remains recommended before claiming hardware validation
-on both board revisions.
+micro:bit V1 and V2. The complete acceptance tests below were performed on a
+micro:bit V2, followed by a physical V1 compatibility test covering the RGB
+LEDs, UART LCD, battery reading and HuskyLens 2 classification.
 
 ## Test 1 - battery and RGB LEDs
 
@@ -98,7 +98,7 @@ a4_ai_vision.initLcdUart(SerialPin.P1, SerialPin.P0)
 
 Acceptance tests performed on 7 September 2026 with:
 
-- BBC micro:bit V2;
+- BBC micro:bit V2 and V1;
 - HuskyLens 2 hardware `1.0.0`, system `1.2.2`;
 - A4 LCD extension `v0.0.10`;
 - AI Vision test package `0.2.8`.
@@ -114,4 +114,4 @@ Acceptance tests performed on 7 September 2026 with:
 | Board compatibility | Result | Notes |
 |---|---|---|
 | micro:bit V2 | Pass | Compilation and complete physical acceptance test |
-| micro:bit V1 | To confirm | Uses no V2-only API; physical hardware test not yet performed |
+| micro:bit V1 | Pass | RGB LEDs, UART LCD, battery reading (75%) and classification IDs 1 to 4 validated; display cleared with no learned object |
