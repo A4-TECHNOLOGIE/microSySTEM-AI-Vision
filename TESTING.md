@@ -31,6 +31,11 @@ Any compilation error, missing symbol, invalid package file or simulator excepti
 - a charged battery or suitable USB power supply;
 - four visually distinct test objects for classification.
 
+The extension uses only I2C, UART, radio and standard pin APIs shared by
+micro:bit V1 and V2. The acceptance tests below were performed on a micro:bit
+V2. A physical V1 test remains recommended before claiming hardware validation
+on both board revisions.
+
 ## Test 1 - battery and RGB LEDs
 
 1. Read the battery level and display it on the micro:bit.
@@ -91,12 +96,22 @@ a4_ai_vision.initLcdUart(SerialPin.P1, SerialPin.P0)
 
 ## Release acceptance record
 
-Before creating a public GitHub release, record the date, micro:bit version, LCD version, HuskyLens 2 firmware version and result of each hardware test.
+Acceptance tests performed on 7 September 2026 with:
+
+- BBC micro:bit V2;
+- HuskyLens 2 hardware `1.0.0`, system `1.2.2`;
+- A4 LCD extension `v0.0.10`;
+- AI Vision test package `0.2.8`.
 
 | Test | Result | Notes |
 |---|---|---|
-| Battery and RGB LEDs | Not run | Requires the physical model |
-| UART LCD initialization | Not run | Requires the physical model |
-| LCD text deletion | Not run | Requires the physical model |
-| HuskyLens 2 classification | Not run | Requires the physical model and four learned objects |
-| Legacy project compatibility | Not run | Requires an existing development project |
+| Battery and RGB LEDs | Pass | Battery 81%; dual colors, numeric RGB values, brightness and switch-off validated |
+| UART LCD initialization | Pass | Parameter-free initialization; white background and black text displayed correctly |
+| LCD text deletion | Pass | Text objects 3 and 4 deleted; title and background preserved with LCD `v0.0.10` |
+| HuskyLens 2 classification | Pass | IDs 1 to 4 recognized; display cleared when no learned object was present |
+| Legacy project compatibility | Pass | `a4_ai_vision` program compiled and ran; legacy calls may render differently in Blocks |
+
+| Board compatibility | Result | Notes |
+|---|---|---|
+| micro:bit V2 | Pass | Compilation and complete physical acceptance test |
+| micro:bit V1 | To confirm | Uses no V2-only API; physical hardware test not yet performed |
